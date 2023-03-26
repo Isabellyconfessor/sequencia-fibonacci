@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Identificador de números de Fibonacci</title>
+    <link rel="stylesheet" href="style-fibonacci.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Identificador de números de Fibonacci</h1>
+    <label for="number">Digite um número:</label>
+    <input type="text" id="number" name="number">
+    <button onclick="checkFibonacci()">Verificar</button>
+    <p id="result"></p>
+
+    <script>
+      function checkFibonacci() {
+        let number = document.getElementById("number").value;
+        let fib1 = 0;
+        let fib2 = 1;
+        while (fib2 < number) {
+          let temp = fib2;
+          fib2 = fib1 + fib2;
+          fib1 = temp;
+        }
+        if (fib2 == number) {
+          document.getElementById("result").innerHTML = `${number} está na sequência de Fibonacci.`;
+        } else {
+          document.getElementById("result").innerHTML = `${number} não está na sequência de Fibonacci.`;
+        }
+      }
+    </script>
+    
+  </body>
+</html>

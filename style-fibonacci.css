@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-image: url(logo-target.png);
+    background-repeat: no-repeat;
+    background-position: center 280px;
+}
+
+h1{
+    color: red;
+    margin-top: 80px;
+    margin-bottom: 45px;
+    font-family: 'Alkatra', cursive;
+    font-weight: normal;
+}
+
+label{
+    font-size: 20px;
+}
+
+button{
+    opacity: 0.8;
+    height: 25px;
+}
+
+button:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+}
